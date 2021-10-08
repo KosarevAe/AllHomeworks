@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class Homework3 {
+    //Домашнее задание для третьего урока
     public static void main(String[] args) {
         first();
         second();
