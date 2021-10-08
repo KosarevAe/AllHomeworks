@@ -1,4 +1,5 @@
 public class Homework2 {
+    //Домашнее задание для второго урока
     public static void main(String[] args) {
         boolean one = first(5, 10);
         System.out.println(one);
