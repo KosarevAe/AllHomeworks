@@ -2,6 +2,8 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+//Домашнее задание для 4 урока
+
 public class Homework4 {
     private static final String AI_WIN_MSG = "Победил компьютер!";
     private static final String HUMAN_WIN_MSG = "Победил человек!";
