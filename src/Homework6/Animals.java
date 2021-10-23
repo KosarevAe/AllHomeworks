@@ -16,11 +16,22 @@ public class Animals {
         System.out.println(name + " проплыл(-a):" + distance + " метров\n");
     }
 
+    public int countAnimals() {
+        int count = 0;
+        count += 1;
+        return count;
+    }
+
+    @Override
+    public String toString() {
+        return "Animals{" + "name='" + name + " " + countAnimals() + '\'' + '}';
+    }
+
     public static void main(String[] args) {
         Animals firstAnimal = new Animals("Животное");
-        Cat firstCat = new Cat("Барсик");
-        Dog firstDog = new Dog("Бобик");
-        Cat secondCat = new Cat("Персик");
+        Animals firstCat = new Cat("Барсик");
+        Animals firstDog = new Dog("Бобик");
+        Animals secondCat = new Cat("Персик");
 
         firstAnimal.run("Животное", 600);
         firstAnimal.swim("Животное", 1000);
@@ -32,7 +43,7 @@ public class Animals {
 
         System.out.println("-----------------");
 
-        secondCat.run("Персик", 100);
+        secondCat.run("Персик", 50);
         secondCat.swim("Персик", 5);
 
         System.out.println("-----------------");
@@ -40,8 +51,18 @@ public class Animals {
         firstDog.run("Бобик", 450);
         firstDog.swim("Бобик", 15);
 
-    }
+        System.out.println("-----------------");
+        
+        int count = 0;
+        Animals[] animalsArray = {firstAnimal, firstCat, secondCat, firstDog};
+        for (Animals animals : animalsArray) {
+            if (animals instanceof Animals == true) {
+                count += 1;
+            }
+        }
+        System.out.println("Животные: " + count);
 
+    }
 }
 
 
